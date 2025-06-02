@@ -13,7 +13,7 @@ import java.util.Scanner;
 public class AnimalService {
     private final List<Animal> animalList = new ArrayList<>();
 
-    public static Animal registerAnimal() {
+    public static void registerAnimal() {
         Scanner scanner = new Scanner(System.in);
         String name = enterAnimalName();
         AnimalType type = chooseAnimalType();
@@ -24,9 +24,9 @@ public class AnimalService {
         String breed = enterBreed();
 
         if(type == AnimalType.DOG){
-            return new Dog(adress,gender,type,breed,name,weigth);
+            new Dog(adress,age,gender,type,breed,name,weigth);
         } else {
-            return new Cat(adress,gender,type,breed,weigth,name);
+            new Cat(adress,age,gender,type,breed,name,weigth);
         }
 
     }

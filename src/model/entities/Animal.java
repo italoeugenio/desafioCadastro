@@ -3,21 +3,33 @@ package src.model.entities;
 import src.enums.AnimalGender;
 import src.enums.AnimalType;
 
+import java.util.ArrayList;
+
 public abstract class Animal {
     private String name;
     private AnimalGender animalGender;
     private AnimalType animalType;
     private String adress;
+    private int age;
     private float weigth;
     public String breed;
 
-    public Animal(String adress, AnimalGender animalGender, AnimalType animalType, String breed, String name, float weigth) {
+    public Animal(String adress, int age, AnimalGender animalGender, AnimalType animalType, String breed, String name, float weigth) {
         this.adress = adress;
+        this.age = age;
         this.animalGender = animalGender;
         this.animalType = animalType;
         this.breed = breed;
         this.name = name;
         this.weigth = weigth;
+    }
+
+    public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
     }
 
     public String getBreed() {

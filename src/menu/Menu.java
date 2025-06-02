@@ -1,8 +1,10 @@
 package src.menu;
 
 import src.forms.ReaderForm;
+import src.model.entities.Animal;
 import src.service.AnimalService;
 
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Menu {
@@ -19,6 +21,10 @@ public class Menu {
             System.out.println("6. Exit");
             System.out.print("Enter a option: ");
             int opcao = scanner.nextInt();
+            while(opcao < 0 || opcao > 6){
+                System.out.print("Enter a valid option: ");
+                opcao = scanner.nextInt();
+            }
 
             switch (opcao){
                 case 1:
